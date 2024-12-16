@@ -22,25 +22,31 @@ class Program
             switch (choix)
             {
                 case "1":
+                    // Afficher Les marques disponibles
+                    gestionParc.AfficherMarques();
                     Console.Write("Entrez la marque : ");
                     string marque = Console.ReadLine();
+
+                    // Afficher les modèles disponibles pour une marque donnée
+                    gestionParc.AfficherModeles(marque);
                     Console.Write("Entrez le modèle : ");
                     string modele = Console.ReadLine();
+
                     Console.Write("Entrez l'année : ");
                     if (int.TryParse(Console.ReadLine(), out int annee))
                     {
-                        //
+                        
                         gestionParc.AjouterVoiture(marque, modele, annee);
                     }
                     else
                     {
-                        //
+                        
                         Console.WriteLine("Année invalide.");
                     }
                     break;
 
                 case "2":
-                    //
+                    
                     gestionParc.ListerVoitures();
                     break;
 
@@ -48,12 +54,12 @@ class Program
                     Console.Write("Entrez l'ID de la voiture à louer : ");
                     if (int.TryParse(Console.ReadLine(), out int idLouer))
                     {
-                        //
+                        
                         gestionParc.LouerVoiture(idLouer);
                     }
                     else
                     {
-                        //
+                        
                         Console.WriteLine("ID invalide.");
                     }
                     break;
@@ -62,12 +68,12 @@ class Program
                     Console.Write("Entrez l'ID de la voiture à rendre : ");
                     if (int.TryParse(Console.ReadLine(), out int idRendre))
                     {
-                        //
+                        
                         gestionParc.RendreVoiture(idRendre);
                     }
                     else
                     {
-                        //
+                        
                         Console.WriteLine("ID invalide.");
                     }
                     break;
@@ -78,7 +84,6 @@ class Program
                     break;
 
                 default:
-                    //
                     Console.WriteLine("Option invalide, veuillez réessayer.");
                     break;
             }
