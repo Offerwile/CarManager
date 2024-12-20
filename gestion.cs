@@ -7,15 +7,16 @@ public class GestionParc
     private int prochainId = 1;
 
     // Définir les listes prédéfinies de marques et modèles
-    private List<string> marques = new List<string> { "Peugeot", "Renault", "Citroën", "BMW", "Audi" };
+    private List<string> marques = new List<string> { "Peugeot", "Renault", "Citroën", "BMW", "Audi", "Ferrari", "Porsche" };
     private Dictionary<string, List<string>> modeles = new Dictionary<string, List<string>>()
     {
        { "Peugeot", new List<string> { "208", "3008", "5008" } },
         { "Renault", new List<string> { "Clio", "Mégane", "Captur" } },
         { "Citroën", new List<string> { "C3", "C4", "C5" } },
         { "BMW", new List<string> { "Serie 3", "X5", "Z4" } },
-        { "Audi", new List<string> { "A3", "A4", "Q5" } }
-        
+        { "Audi", new List<string> { "A3", "A4", "Q5" } },
+        {"Ferrari", new List<string> {"360 spider", "FXX", "458 Italia"} },
+        {"Porsche", new List<string> {"GT3 RS", "911", "Boxter"}}
     };
 
     // Ajouter une nouvelle voiture au parc
@@ -30,7 +31,7 @@ public class GestionParc
         }
         else
         {
-            Console.WriteLine("Marque ou modèle invalide.");
+            Console.WriteLine("Marque ou modèle invalide. Veuilliez recomencer."); 
         }    
     }
 
